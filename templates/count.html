@@ -1,0 +1,24 @@
+<h1>Count</h1>
+
+<h4> {{ fulltext }} </h4>
+<a href="{% url 'home' %}">Home</a>
+&nbsp;
+<a href="{% url 'about' %}">About</a>
+
+
+<p>Total characters are: {{ length }} </p>
+<p>Total wods are: {{ words }} </p>
+
+<br>
+
+{{ worddictionary }}
+
+<hr>
+
+{% for word, cnt in worddictionary %}
+
+{{ word }} - {{ cnt }}
+
+<br>
+
+{% endfor %}
